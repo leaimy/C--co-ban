@@ -1,0 +1,6 @@
+C:\Users\ADMINIS\Desktop\C#\BAI03\BAI03\bin\Debug\BAI03.exe.config
+C:\Users\ADMINIS\Desktop\C#\BAI03\BAI03\bin\Debug\BAI03.exe
+C:\Users\ADMINIS\Desktop\C#\BAI03\BAI03\bin\Debug\BAI03.pdb
+C:\Users\ADMINIS\Desktop\C#\BAI03\BAI03\obj\Debug\BAI03.csprojResolveAssemblyReference.cache
+C:\Users\ADMINIS\Desktop\C#\BAI03\BAI03\obj\Debug\BAI03.exe
+C:\Users\ADMINIS\Desktop\C#\BAI03\BAI03\obj\Debug\BAI03.pdb
