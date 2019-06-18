@@ -15,7 +15,7 @@ namespace BAI05_GHICHU
         /// <param name="y">nhập y kiểu nguyên</param>
         static void Ham1(int x, int y)
         {
-
+            Console.WriteLine("Hello World");
         }
         /// <summary>
         /// Đây là hàm tính tổng 3 số
