@@ -11,6 +11,8 @@ namespace BAI18
         #region các biến lớp
         private int ma;
         private string ten;
+        private DateTime namSinh;
+
         #endregion
         #region các constructor
         public SinhVien()
@@ -47,12 +49,37 @@ namespace BAI18
                 return this.ten;
             }
         }
+        public DateTime NamSinh
+        {
+            get
+            {
+                return this.namSinh;
+            }
+            set
+            {
+                this.namSinh = value;
+            }
+        }
         #endregion
         #region các phương thức
         public override string ToString()
         {
             return this.ma+"\t"+this.ten;
         }
+        private bool KiemTraNamSinhHopLe()
+        {
+            return (DateTime.Now.Year - this.namSinh.Year >= 17);
+        }
+        public void XuatThongTin()
+        {
+            if (KiemTraNamSinhHopLe() == false)
+                Console.WriteLine("Năm sinh không hợp lệ");
+            else
+            {
+                Console.WriteLine(ToString());
+            }
+        }
         #endregion
+
     }
 }
