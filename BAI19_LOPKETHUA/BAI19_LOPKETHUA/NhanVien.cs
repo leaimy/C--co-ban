@@ -6,10 +6,17 @@ using System.Threading.Tasks;
 
 namespace BAI19_LOPKETHUA
 {
-   public class NhanVien
+   public class NhanVien:ILamViec
     {
         public int Ma { get; set; }
         public string Ten { get; set; }
+
+        public string LamViec(string mota)
+        {
+           string s="Nhân viên đang ["+mota+"]";
+            return s;
+        }
+
         public void TinhLuong()
         {
             Console.WriteLine("Đây là phương thức tính lương của NhanVien");
