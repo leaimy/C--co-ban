@@ -10,7 +10,6 @@ namespace ONTAP_BAI20
     {
         private List<NhanVien> dsNV = new List<NhanVien>();
         private string p;
-
         public PhongBan(string p)
         {
             this.p = p;
