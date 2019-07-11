@@ -122,6 +122,84 @@ namespace ONTAP
             Console.WriteLine("\nThời gian: {0}", chat);
             Console.Write("-----------------------------------------------");
         }
+        static void Chuoi1()
+        {
+            string ch; //Khai báo một chuỗi
+
+            Console.Write("\nNhập và in chuỗi trong C#:\n");
+            Console.Write("Nhập một chuỗi: ");
+            ch = Console.ReadLine();
+            Console.Write("Bạn vừa nhập chuỗi: {0}\n", ch);
+
+            // Tính chiều dài chuỗi
+            int chieudai = 0;
+            foreach (char kt in ch)
+            {
+                chieudai += 1;
+            }
+            Console.WriteLine("Độ dài chuỗi là: {0}", chieudai);
+
+            // Tách chuỗi
+            int l = 0;
+            Console.Write("In từng ký tự trong chuỗi ban đầu: ");
+            while (l <= chieudai - 1) // hoặc "while(l<=ch.Length-1)"
+            {
+                Console.Write("{0} ", ch[l]);
+                l++;
+            }
+            Console.Write("\n");
+
+            // Tách chuỗi theo chiều đảo ngược
+            int d = 0;
+            d = chieudai - 1;
+            Console.Write("In các ký tự theo chiều đảo ngược: ");
+            while (d >= 0)
+            {
+                Console.Write("{0} ", ch[d]);
+                d--;
+            }
+            Console.Write("\n");
+
+            // Đếm số từ trong một chuỗi
+            int cd = 0;
+            int dem = 1;
+            //lặp đến phần cuối của chuỗi 
+            while(cd<=chieudai-1)
+            {
+                //kiểm tra xem ký tự hiện tại có phải là khoảng trắng
+                //hay là ký tự new line hay ký tự tab 
+                if(ch[cd]==' '||ch[cd]=='\n'||ch[cd]=='\t')
+                {
+                    dem++;
+                }
+                cd++;
+            }
+            Console.Write("Tổng số từ có trong chuỗi trên là: {0}\n", dem);
+
+            // Đếm số chữ cái, số chữ số, số ký tự đặc biệt của chuỗi
+            int chu_cai, chu_so, ky_tu_dac_biet, i;
+            chu_cai = chu_so = ky_tu_dac_biet = i = 0;
+            //kiểm tra từng ký tự trong chuỗi
+            while(i<chieudai)
+            {
+                if((ch[i]>='a'&&ch[i]<='z')||(ch[i]>='A'&&ch[i]<='Z'))
+                {
+                    chu_cai++;
+                }
+                else if(ch[i]>='0'&&ch[i]<='9')
+                {
+                    chu_so++;
+                }
+                else
+                {
+                    ky_tu_dac_biet++;
+                }
+                i++;
+            }
+            Console.Write("Số chữ cái trong chuỗi là: {0}\n", chu_cai);
+            Console.Write("Số chữ số trong chuỗi là: {0}\n", chu_so);
+            Console.Write("Số ký tự đặc biệt trong chuỗi là: {0}\n", ky_tu_dac_biet);
+        }
 
         static void Main(string[] args)
         {
@@ -131,6 +209,7 @@ namespace ONTAP
             IfVaElse();
             VongLap();
             Chuoi();
+            Chuoi1();
             Console.ReadLine();
         }
     
